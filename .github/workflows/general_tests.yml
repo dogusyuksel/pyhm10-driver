@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with:
-        github-server-url: https://github.com/dogusyuksel/HM10-HM11_Driver.git
+        github-server-url: https://github.com/dogusyuksel/pyhm10-driver.git
         lfs: true
 
     - name: Download Repos

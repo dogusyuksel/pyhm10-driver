@@ -15,9 +15,14 @@ jobs:
         github-server-url: https://github.com/dogusyuksel/pyhm10-driver.git
         lfs: true
 
-    - name: Download Repos
+    - name: clone docker
       run: |
-        ./setup_environment.sh
+        git clone https://github.com/dogusyuksel/embedded_docker.git docker
+        cp -rf docker/* .
+
+    - name: Remove unnecessary files
+      run: |
+        ./free_space.sh
 
     - name: Login to Docker Hub
       uses: docker/login-action@v3
